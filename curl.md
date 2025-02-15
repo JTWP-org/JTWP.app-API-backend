@@ -5,7 +5,7 @@
 ```bash
 curl -X POST http://23.139.82.77:5000/api/submit_death \
   -H "Content-Type: application/json" \
-  -H "X-API-Key: 58d577a8107f2cffb67ec5d278139f76" \
+  -H "X-API-Key: {KEY}" \
   -d '{
         "deathEvent": {
           "timeStamp": "2025-02-14T12:34:56",
@@ -39,7 +39,7 @@ curl -X POST http://23.139.82.77:5000/api/submit_death \
 ```bash
 curl -X POST http://23.139.82.77:5000/api/submit_killer \
   -H "Content-Type: application/json" \
-  -H "X-API-Key: 58d577a8107f2cffb67ec5d278139f76" \
+  -H "X-API-Key: {KEY}" \
   -d '{
         "killerEvent": {
           "timeStamp": "2025-02-14T12:35:00",
@@ -73,7 +73,7 @@ curl -X POST http://23.139.82.77:5000/api/submit_killer \
 ```bash
 curl -X POST http://23.139.82.77:5000/api/submit_teamkill \
   -H "Content-Type: application/json" \
-  -H "X-API-Key: 58d577a8107f2cffb67ec5d278139f76" \
+  -H "X-API-Key: {KEY}" \
   -d '{
         "teamKillEvent": {
           "timeStamp": "2025-02-14T12:40:00",
@@ -107,7 +107,7 @@ curl -X POST http://23.139.82.77:5000/api/submit_teamkill \
 ```bash
 curl -X POST http://23.139.82.77:5000/api/submit_kys \
   -H "Content-Type: application/json" \
-  -H "X-API-Key: 58d577a8107f2cffb67ec5d278139f76" \
+  -H "X-API-Key: {KEY}" \
   -d '{
         "kysEvent": {
           "timeStamp": "2025-02-14T12:50:00",
@@ -139,7 +139,7 @@ curl -X POST http://23.139.82.77:5000/api/submit_kys \
 ```bash
 curl -X POST http://23.139.82.77:5000/api/submit_join \
   -H "Content-Type: application/json" \
-  -H "X-API-Key: 58d577a8107f2cffb67ec5d278139f76" \
+  -H "X-API-Key: {KEY}" \
   -d '{
         "joinEvent": {
           "timeStamp": "2025-02-14T13:00:00",
@@ -166,7 +166,7 @@ curl -X POST http://23.139.82.77:5000/api/submit_join \
 ```bash
 curl -X POST http://23.139.82.77:5000/api/submit_left \
   -H "Content-Type: application/json" \
-  -H "X-API-Key: 58d577a8107f2cffb67ec5d278139f76" \
+  -H "X-API-Key: {KEY}" \
   -d '{
         "leftEvent": {
           "timeStamp": "2025-02-14T13:05:00",
