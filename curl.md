@@ -1,28 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>API Curl Commands</title>
-  <style>
-    body {
-      font-family: "Courier New", Courier, monospace;
-      background-color: #f9f9f9;
-      padding: 20px;
-    }
-    h2 {
-      color: #333;
-    }
-    pre {
-      background-color: #eee;
-      border: 1px solid #ccc;
-      padding: 10px;
-      overflow: auto;
-    }
-  </style>
-</head>
-<body>
-  <h2>#DEATH</h2>
-  <pre>
+<h1># API Curl Commands</h1>
+
+## DEATH
+
+```bash
 curl -X POST http://23.139.82.77:5000/api/submit_death \
   -H "Content-Type: application/json" \
   -H "X-API-Key: 58d577a8107f2cffb67ec5d278139f76" \
@@ -50,10 +30,13 @@ curl -X POST http://23.139.82.77:5000/api/submit_death \
           ]
         }
       }'
-  </pre>
+```
 
-  <h2>#KILL</h2>
-  <pre>
+---
+
+## KILL
+
+```bash
 curl -X POST http://23.139.82.77:5000/api/submit_killer \
   -H "Content-Type: application/json" \
   -H "X-API-Key: 58d577a8107f2cffb67ec5d278139f76" \
@@ -81,10 +64,13 @@ curl -X POST http://23.139.82.77:5000/api/submit_killer \
           ]
         }
       }'
-  </pre>
+```
 
-  <h2>#TEAMKILL</h2>
-  <pre>
+---
+
+## TEAMKILL
+
+```bash
 curl -X POST http://23.139.82.77:5000/api/submit_teamkill \
   -H "Content-Type: application/json" \
   -H "X-API-Key: 58d577a8107f2cffb67ec5d278139f76" \
@@ -112,10 +98,13 @@ curl -X POST http://23.139.82.77:5000/api/submit_teamkill \
           ]
         }
       }'
-  </pre>
+```
 
-  <h2>#KYS</h2>
-  <pre>
+---
+
+## KYS
+
+```bash
 curl -X POST http://23.139.82.77:5000/api/submit_kys \
   -H "Content-Type: application/json" \
   -H "X-API-Key: 58d577a8107f2cffb67ec5d278139f76" \
@@ -141,10 +130,13 @@ curl -X POST http://23.139.82.77:5000/api/submit_kys \
           ]
         }
       }'
-  </pre>
+```
 
-  <h2>#JOIN</h2>
-  <pre>
+---
+
+## JOIN
+
+```bash
 curl -X POST http://23.139.82.77:5000/api/submit_join \
   -H "Content-Type: application/json" \
   -H "X-API-Key: 58d577a8107f2cffb67ec5d278139f76" \
@@ -156,4 +148,46 @@ curl -X POST http://23.139.82.77:5000/api/submit_join \
               "name": "PlayerD",
               "clan": "ClanD"
             }
-      
+          ],
+          "stats": [
+            {
+              "spawnedAtLoc": "D4",
+              "levelname": "Map5"
+            }
+          ]
+        }
+      }'
+```
+
+---
+
+## LEFT
+
+```bash
+curl -X POST http://23.139.82.77:5000/api/submit_left \
+  -H "Content-Type: application/json" \
+  -H "X-API-Key: 58d577a8107f2cffb67ec5d278139f76" \
+  -d '{
+        "leftEvent": {
+          "timeStamp": "2025-02-14T13:05:00",
+          "eventDetail": [
+            {
+              "name": "PlayerD",
+              "clan": "ClanD"
+            }
+          ],
+          "stats": [
+            {
+              "lastAtLoc": "D5",
+              "levelname": "Map5"
+            }
+          ]
+        }
+      }'
+```
+
+---
+
+Copy the above content into a file named `api_commands.md` and the formatting will be preserved in any Markdown viewer.
+
+Let me know if you need any further adjustments!
