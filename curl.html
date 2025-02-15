@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>API Curl Commands</title>
+  <style>
+    body {
+      font-family: "Courier New", Courier, monospace;
+      background-color: #f9f9f9;
+      padding: 20px;
+    }
+    h2 {
+      color: #333;
+    }
+    pre {
+      background-color: #eee;
+      border: 1px solid #ccc;
+      padding: 10px;
+      overflow: auto;
+    }
+  </style>
+</head>
+<body>
+  <h2>#DEATH</h2>
+  <pre>
+curl -X POST http://23.139.82.77:5000/api/submit_death \
+  -H "Content-Type: application/json" \
+  -H "X-API-Key: 58d577a8107f2cffb67ec5d278139f76" \
+  -d '{
+        "deathEvent": {
+          "timeStamp": "2025-02-14T12:34:56",
+          "eventDetail": [
+            {
+              "name": "PlayerB",
+              "clan": "ClanX",
+              "killer": "PlayerA",
+              "headshot": true,
+              "item": "AK47"
+            }
+          ],
+          "stats": [
+            {
+              "cash": 0,
+              "armor": 0,
+              "health": 0,
+              "score": 0,
+              "killedAtLoc": "A1",
+              "levelname": "Map1"
+            }
+          ]
+        }
+      }'
+  </pre>
+
+  <h2>#KILL</h2>
+  <pre>
+curl -X POST http://23.139.82.77:5000/api/submit_killer \
+  -H "Content-Type: application/json" \
+  -H "X-API-Key: 58d577a8107f2cffb67ec5d278139f76" \
+  -d '{
+        "killerEvent": {
+          "timeStamp": "2025-02-14T12:35:00",
+          "eventDetail": [
+            {
+              "name": "PlayerA",
+              "clan": "ClanX",
+              "victim": "PlayerB",
+              "headshot": true,
+              "item": "AK47"
+            }
+          ],
+          "stats": [
+            {
+              "cash": 0,
+              "armor": 0,
+              "health": 0,
+              "score": 0,
+              "killedAtLoc": "A1",
+              "levelname": "Map1"
+            }
+          ]
+        }
+      }'
+  </pre>
+
+  <h2>#TEAMKILL</h2>
+  <pre>
+curl -X POST http://23.139.82.77:5000/api/submit_teamkill \
+  -H "Content-Type: application/json" \
+  -H "X-API-Key: 58d577a8107f2cffb67ec5d278139f76" \
+  -d '{
+        "teamKillEvent": {
+          "timeStamp": "2025-02-14T12:40:00",
+          "eventDetail": [
+            {
+              "name": "PlayerX",
+              "clan": "ClanY",
+              "killed": "PlayerZ",
+              "headshot": true,
+              "item": "AK47"
+            }
+          ],
+          "stats": [
+            {
+              "cash": 0,
+              "armor": 0,
+              "health": 0,
+              "score": 0,
+              "killedAtLoc": "B2",
+              "levelname": "Map3"
+            }
+          ]
+        }
+      }'
+  </pre>
+
+  <h2>#KYS</h2>
+  <pre>
+curl -X POST http://23.139.82.77:5000/api/submit_kys \
+  -H "Content-Type: application/json" \
+  -H "X-API-Key: 58d577a8107f2cffb67ec5d278139f76" \
+  -d '{
+        "kysEvent": {
+          "timeStamp": "2025-02-14T12:50:00",
+          "eventDetail": [
+            {
+              "name": "PlayerC",
+              "clan": "ClanZ",
+              "item": "AK47"
+            }
+          ],
+          "stats": [
+            {
+              "cash": 0,
+              "armor": 0,
+              "health": 0,
+              "score": 0,
+              "killedAtLoc": "C3",
+              "levelname": "Map4"
+            }
+          ]
+        }
+      }'
+  </pre>
+
+  <h2>#JOIN</h2>
+  <pre>
+curl -X POST http://23.139.82.77:5000/api/submit_join \
+  -H "Content-Type: application/json" \
+  -H "X-API-Key: 58d577a8107f2cffb67ec5d278139f76" \
+  -d '{
+        "joinEvent": {
+          "timeStamp": "2025-02-14T13:00:00",
+          "eventDetail": [
+            {
+              "name": "PlayerD",
+              "clan": "ClanD"
+            }
+      
