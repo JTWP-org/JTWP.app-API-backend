@@ -1,0 +1,24 @@
+{
+    "deathEvent": {
+        "timeStamp": "{DATE}",
+        "eventDetail": [
+            {
+                "name": "{KILLED}",
+                "clan": "{CLAN}",
+                "killer": "{KILLER}",
+                "headshot": true,
+                "item": "AK47"
+            }
+        ],
+        "stats": [
+            {
+                "cash": 0,
+                "armor": 0,
+                "health": 0,
+                "score": 0,
+                "killedAtLoc": "{LOC}",
+                "levelname": "{MAP}"
+            }
+        ]
+    }
+}
