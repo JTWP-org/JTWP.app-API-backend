@@ -8,7 +8,7 @@ def initialize_csv(file_path, columns):
         df.to_csv(file_path, index=False)
         print(f"{file_path} initialized.")
 
-if __name__ == "__main__":
+def initialize_all_csvs():
     with open("config.json", "r") as f:
         config = json.load(f)
     csv_paths = config["CSV_FILE_PATHS"]
@@ -35,3 +35,6 @@ if __name__ == "__main__":
     initialize_csv(csv_paths["LEFT_CSV_FILE"], [
         "timestamp", "name", "clan", "lastAtLoc", "levelname"
     ])
+
+if __name__ == "__main__":
+    initialize_all_csvs()
