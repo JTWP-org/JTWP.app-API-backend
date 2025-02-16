@@ -45,8 +45,8 @@ Your setup scripts are located in the setupScripts/ folder.
 <p>
     Generate a new primary API key (if you choose to).
     Update the .env file with the new key.
-    Create or update a hidden Markdown file with curl commands (located at, for example, docs/.curl_commands.md), replacing any placeholder with the new key.
-    Optionally generate and append a secondary API key to a secondary key file.
+    Create or update a hidden Markdown file with curl commands (located at docs/.curl_commands.md), replacing any placeholder with the new key.
+    Optionally generate and append a secondary API key to a secondary key file for outside api request .
 <p>
 
 ```bash
