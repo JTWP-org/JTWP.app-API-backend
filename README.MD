@@ -27,7 +27,9 @@ Your project directory should now look like this:
 
 ### 1. Install Dependencies / allow port 
 
+<h5>
 Install the required Python packages using pip:
+</h5>
 
 ```bash
 pip install flask pandas python-dotenv
@@ -38,12 +40,12 @@ sudo ufw allow 5000
 
 Your setup scripts are located in the setupScripts/ folder.
 
-<p>
+<h5>
     Generate a new primary API key (if you choose to).
     Update the .env file with the new key.
     Create or update a hidden Markdown file with curl commands (located at, for example, docs/.curl_commands.md), replacing any placeholder with the new key.
     Optionally generate and append a secondary API key to a secondary key file.
-</p>
+<h5>
 
 ```bash
 ./setupScripts/make_key.sh
@@ -52,38 +54,46 @@ Your setup scripts are located in the setupScripts/ folder.
 
 ### 3. Run the API
 
+<h5>
 Start the API server by running:
+    Your API will now be running on port 5000.
+</h5>
 
 ```bash
 python main_api.py
 ```
 
-Your API will now be running on port 5000.
+
 
 <hr>
 
 ### 4 (FOR DEBUG)
 3. Initialize CSV Files
 
+<h5>
 The CSV files are automatically initialized when you run the API. However, if you wish to run the initialization separately, execute:
+This will create the necessary CSV files inside the data/ folder if they do not already exist.
+</h5>
 
 ```bash
 python scripts/csv_init.py
 ```
 
-This will create the necessary CSV files inside the data/ folder if they do not already exist.
 
 
 ### 5. Setting Up as a Service (Optional)
 
+<h5>
 If you want your API to run as a background service on a Linux system, use the provided `setup_service.sh` script. First, make the script executable and then run it with sudo:
+This script creates a systemd service for your API, reloads systemd, enables the service at boot, and starts it immediately.
+</h5>
 
 ```bash
 sudo chmod +x setup_service.sh
 sudo ./setup_service.sh
 ```
 
-This script creates a systemd service for your API, reloads systemd, enables the service at boot, and starts it immediately.
+
 
 ### 6. Testing the API
 
@@ -92,12 +102,12 @@ You can use the provided curl commands (see `api_commands.md` for details) to te
 ## Endpoints
 
 The API exposes the following endpoints:
-
+<h5>
 - **POST /api/submit_death**: Submit a death event.
 - **POST /api/submit_killer**: Submit a killer event.
 - **POST /api/submit_teamkill**: Submit a teamkill event.
 - **POST /api/submit_kys**: Submit a KYS event.
 - **POST /api/submit_join**: Submit a join event.
 - **POST /api/submit_left**: Submit a left event.
-
+</h5>
 Optional GET endpoints are available to retrieve the stored events from each CSV file.
