@@ -26,8 +26,6 @@ Your project directory should now look like this:
 ```
 
 
-/project_folder |-- config.json # Contains CSV file paths and API_KEY_PATH configuration |-- .env # Contains the primary API key (not checked into VCS) |-- main_api.py # Main Flask API (POST endpoints and overall logic) |-- scripts/ # Contains helper modules |-- csv_init.py # CSV initialization functions (creates CSVs in data/) |-- api_key.py # API key loader and checker (loads API_KEY from .env) |-- get_endpoints.py # GET endpoints (registered as a Blueprint) |-- data/ # Directory where CSV files are stored |-- (CSV files will be created here automatically) |-- setupScripts/ # Contains setup scripts |-- make_key.sh # Script to generate a new API key and update files |-- make_service.sh # Script to create a systemd service for the API
-
 ## How to Use
 
 ### 1. Install Dependencies
@@ -56,9 +54,6 @@ Update (or create) your .env file with the new key. and build the .built_curls.m
 ```
 
 
-
-
-
 ### 4. Initialize CSV Files
 
 Run the CSV initialization script to create the necessary CSV files (if they don’t exist):
@@ -76,6 +71,8 @@ python main_api.py
 ```
 
 Your API will now be running on port 5000.
+
+
 
 ### 6. Setting Up as a Service (Optional)
 
