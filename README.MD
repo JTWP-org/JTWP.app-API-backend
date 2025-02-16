@@ -19,16 +19,16 @@ sudo allow ufw 5000
 ```
 
 
-### 3. Configure Environment Variables
+### 3. Configure Environment Variables and build CURL cmds for POST events
 
 Create a file named `.env` in your project folder with the api key (make your own or use the bash script to Generate a 32-byte random string and encode it in hexadecimal )
-keep in mind u will need to pass this key to the CURL cmds used later on:
+Update (or create) your .env file with the new key. and build the .built_curls.md with updated CURL cmds to be used in UE5 logic (note this file is hidden as it has API key ):
 
 ```bash
-./makeKey.sh > .env
+./setupScripts/makeKey.sh 
 ```
 
-makeKey.sh
+
 
 
 
