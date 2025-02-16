@@ -3,7 +3,7 @@
 ## DEATH
 
 ```bash
-curl -X POST http://23.139.82.77:5000/api/submit_death \
+curl -X POST http://jtwp.app:5000/api/submit_death \
   -H "Content-Type: application/json" \
   -H "X-API-Key: API_KEY_HERE" \
   -d '{
@@ -37,7 +37,7 @@ curl -X POST http://23.139.82.77:5000/api/submit_death \
 ## KILL
 
 ```bash
-curl -X POST http://23.139.82.77:5000/api/submit_killer \
+curl -X POST http://jtwp.app:5000/api/submit_killer \
   -H "Content-Type: application/json" \
   -H "X-API-Key: API_KEY_HERE" \
   -d '{
@@ -71,7 +71,7 @@ curl -X POST http://23.139.82.77:5000/api/submit_killer \
 ## TEAMKILL
 
 ```bash
-curl -X POST http://23.139.82.77:5000/api/submit_teamkill \
+curl -X POST http://jtwp.app:5000/api/submit_teamkill \
   -H "Content-Type: application/json" \
   -H "X-API-Key: API_KEY_HERE" \
   -d '{
@@ -105,7 +105,7 @@ curl -X POST http://23.139.82.77:5000/api/submit_teamkill \
 ## KYS
 
 ```bash
-curl -X POST http://23.139.82.77:5000/api/submit_kys \
+curl -X POST http://jtwp.app:5000/api/submit_kys \
   -H "Content-Type: application/json" \
   -H "X-API-Key: API_KEY_HERE" \
   -d '{
@@ -137,7 +137,7 @@ curl -X POST http://23.139.82.77:5000/api/submit_kys \
 ## JOIN
 
 ```bash
-curl -X POST http://23.139.82.77:5000/api/submit_join \
+curl -X POST http://jtwp.app:5000/api/submit_join \
   -H "Content-Type: application/json" \
   -H "X-API-Key: API_KEY_HERE" \
   -d '{
@@ -164,7 +164,7 @@ curl -X POST http://23.139.82.77:5000/api/submit_join \
 ## LEFT
 
 ```bash
-curl -X POST http://23.139.82.77:5000/api/submit_left \
+curl -X POST http://jtwp.app:5000/api/submit_left \
   -H "Content-Type: application/json" \
   -H "X-API-Key: API_KEY_HERE" \
   -d '{
