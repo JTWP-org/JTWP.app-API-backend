@@ -4,6 +4,7 @@ Project Structure
 
 Your project directory should now look like this:
 
+```
 /project_folder
   |-- config.json
   |-- .env
@@ -19,8 +20,13 @@ Your project directory should now look like this:
          |-- kys_events.csv
          |-- left_events.csv
          |-- join_events.csv
+|-- setupScripts/ 
+         |-- make_key.sh 
+         |-- make_service.sh 
+```
 
 
+/project_folder |-- config.json # Contains CSV file paths and API_KEY_PATH configuration |-- .env # Contains the primary API key (not checked into VCS) |-- main_api.py # Main Flask API (POST endpoints and overall logic) |-- scripts/ # Contains helper modules |-- csv_init.py # CSV initialization functions (creates CSVs in data/) |-- api_key.py # API key loader and checker (loads API_KEY from .env) |-- get_endpoints.py # GET endpoints (registered as a Blueprint) |-- data/ # Directory where CSV files are stored |-- (CSV files will be created here automatically) |-- setupScripts/ # Contains setup scripts |-- make_key.sh # Script to generate a new API key and update files |-- make_service.sh # Script to create a systemd service for the API
 
 ## How to Use
 
