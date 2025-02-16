@@ -25,12 +25,13 @@ Your project directory should now look like this:
 
 ## How to Use
 
-### 1. Install Dependencies
+### 1. Install Dependencies / allow port 
 
 Install the required Python packages using pip:
 
 ```bash
 pip install flask pandas python-dotenv
+sudo ufw allow 5000
 ```
 
 ### 2.Generate or Update API Keys 
@@ -47,20 +48,7 @@ Your setup scripts are located in the setupScripts/ folder.
 ```
 
 
-
-
-### 3 (FOR DEBUG)
-3. Initialize CSV Files
-
-The CSV files are automatically initialized when you run the API. However, if you wish to run the initialization separately, execute:
-
-```bash
-python scripts/csv_init.py
-```
-
-This will create the necessary CSV files inside the data/ folder if they do not already exist.
-
-### 4. Run the API
+### 3. Run the API
 
 Start the API server by running:
 
@@ -72,7 +60,19 @@ Your API will now be running on port 5000.
 
 <hr>
 
-### 6. Setting Up as a Service (Optional)
+### 4 (FOR DEBUG)
+3. Initialize CSV Files
+
+The CSV files are automatically initialized when you run the API. However, if you wish to run the initialization separately, execute:
+
+```bash
+python scripts/csv_init.py
+```
+
+This will create the necessary CSV files inside the data/ folder if they do not already exist.
+
+
+### 5. Setting Up as a Service (Optional)
 
 If you want your API to run as a background service on a Linux system, use the provided `setup_service.sh` script. First, make the script executable and then run it with sudo:
 
@@ -83,7 +83,7 @@ sudo ./setup_service.sh
 
 This script creates a systemd service for your API, reloads systemd, enables the service at boot, and starts it immediately.
 
-### 7. Testing the API
+### 6. Testing the API
 
 You can use the provided curl commands (see `api_commands.md` for details) to test the different endpoints.
 
