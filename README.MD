@@ -99,15 +99,21 @@ sudo ./setup_service.sh
 
 You can use the provided curl commands (see `api_commands.md` for details) to test the different endpoints.
 
+<p>
+
 ## Endpoints
 
 The API exposes the following endpoints:
-<p>
+
+```markdown
 - **POST /api/submit_death**: Submit a death event.
 - **POST /api/submit_killer**: Submit a killer event.
 - **POST /api/submit_teamkill**: Submit a teamkill event.
 - **POST /api/submit_kys**: Submit a KYS event.
 - **POST /api/submit_join**: Submit a join event.
 - **POST /api/submit_left**: Submit a left event.
-</p>
+```
 Optional GET endpoints are available to retrieve the stored events from each CSV file.
+
+</p>
+
