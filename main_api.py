@@ -1,10 +1,10 @@
 from flask import Flask, request, jsonify
 from datetime import datetime
-import os, json
-import pandas as pd
+import os, json, pandas as pd
 
 from api_key import check_api_key
 from get_endpoints import get_bp
+from csv_init import initialize_all_csvs
 
 # Load configuration for CSV file paths
 with open("config.json", "r") as f:
@@ -13,6 +13,9 @@ csv_paths = config["CSV_FILE_PATHS"]
 
 app = Flask(__name__)
 app.register_blueprint(get_bp)
+
+# Initialize CSV files at startup
+initialize_all_csvs()
 
 def read_csv_file(file_path):
     try:
@@ -39,6 +42,7 @@ def submit_death():
     payload = request.get_json()
     if not payload or "deathEvent" not in payload:
         return jsonify({"error": "Missing deathEvent in payload"}), 400
+
     death_event = payload["deathEvent"]
     timestamp = death_event.get("timeStamp", datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
     event_detail = death_event.get("eventDetail", [])
@@ -85,6 +89,7 @@ def submit_killer():
     payload = request.get_json()
     if not payload or "killerEvent" not in payload:
         return jsonify({"error": "Missing killerEvent in payload"}), 400
+
     killer_event = payload["killerEvent"]
     timestamp = killer_event.get("timeStamp", datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
     event_detail = killer_event.get("eventDetail", [])
@@ -131,6 +136,7 @@ def submit_teamkill():
     payload = request.get_json()
     if not payload or "teamKillEvent" not in payload:
         return jsonify({"error": "Missing teamKillEvent in payload"}), 400
+
     teamkill_event = payload["teamKillEvent"]
     timestamp = teamkill_event.get("timeStamp", datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
     event_detail = teamkill_event.get("eventDetail", [])
@@ -177,6 +183,7 @@ def submit_kys():
     payload = request.get_json()
     if not payload or "kysEvent" not in payload:
         return jsonify({"error": "Missing kysEvent in payload"}), 400
+
     kys_event = payload["kysEvent"]
     timestamp = kys_event.get("timeStamp", datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
     event_detail = kys_event.get("eventDetail", [])
@@ -219,6 +226,7 @@ def submit_join():
     payload = request.get_json()
     if not payload or "joinEvent" not in payload:
         return jsonify({"error": "Missing joinEvent in payload"}), 400
+
     join_event = payload["joinEvent"]
     timestamp = join_event.get("timeStamp", datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
     event_detail = join_event.get("eventDetail", [])
@@ -251,6 +259,7 @@ def submit_left():
     payload = request.get_json()
     if not payload or "leftEvent" not in payload:
         return jsonify({"error": "Missing leftEvent in payload"}), 400
+
     left_event = payload["leftEvent"]
     timestamp = left_event.get("timeStamp", datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
     event_detail = left_event.get("eventDetail", [])
