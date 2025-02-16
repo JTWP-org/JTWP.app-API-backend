@@ -15,7 +15,9 @@ The backend will receive POST requests from the mod containing information about
 - **Player Death**
   - Validate that the death is valid (i.e., not a team kill)
 
-Based on these events, statistics will be calculated and stored. When a GET request is made by the mod or a Discord bot, the stats will be compiled into JSON objects organized by player. For each player, a JSON file containing their statistics will be generated, and the API will return that JSON when requested.
+Based on these events, statistics will be calculated and stored. When a GET request is made by the mod or a Discord bot, 
+the stats will be compiled into JSON objects organized by player. For each player, a JSON file containing their statistics
+ will be generated, and the API will return that JSON when requested.
 ```
 </hr>
 
