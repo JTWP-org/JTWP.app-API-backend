@@ -37,19 +37,16 @@ pip install flask pandas python-dotenv
 
 Your setup scripts are located in the setupScripts/ folder.
 
-    Generate or Update API Key
-    Run the script to generate a new primary API key or add a secondary key. For example:
+    Generate a new primary API key (if you choose to).
+    Update the .env file with the new key.
+    Create or update a hidden Markdown file with curl commands (located at, for example, docs/.curl_commands.md), replacing any placeholder with the new key.
+    Optionally generate and append a secondary API key to a secondary key file.
 
 ```bash
 ./setupScripts/make_key.sh
 ```
 
-This script will:
 
-    Generate a new primary API key (if you choose to).
-    Update the .env file with the new key.
-    Create or update a hidden Markdown file with curl commands (located at, for example, docs/.curl_commands.md), replacing any placeholder with the new key.
-    Optionally generate and append a secondary API key to a secondary key file.
 
 
 ### 3 (FOR DEBUG)
