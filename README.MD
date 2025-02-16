@@ -25,7 +25,15 @@ Install the required Python packages using pip:
 pip install flask pandas python-dotenv
 ```
 
-### 2. Configure Environment Variables
+
+### 2. allow port 5000 through firewall
+
+```bash
+sudo allow ufw 5000
+```
+
+
+### 3. Configure Environment Variables
 
 Create a file named `.env` in your project folder with the following content (replace the API key with your actual key):
 
