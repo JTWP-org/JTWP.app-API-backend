@@ -4,16 +4,6 @@
 
 Your project directory might look like this:
 
-```
-/project_folder
-  |-- config.json
-  |-- .env
-  |-- csv_init.py
-  |-- api_key.py
-  |-- get_endpoints.py
-  |-- main_api.py
-  |-- setup_service.sh      # (Optional: Bash script to set up a systemd service)
-```
 
 ## How to Use
 
