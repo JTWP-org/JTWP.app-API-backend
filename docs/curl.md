@@ -186,8 +186,4 @@ curl -X POST http://23.139.82.77:5000/api/submit_left \
       }'
 ```
 
----
 
-Copy the above content into a file named `api_commands.md` and the formatting will be preserved in any Markdown viewer.
-
-Let me know if you need any further adjustments!
