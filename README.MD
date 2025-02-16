@@ -1,30 +1,22 @@
+Below is a sample README in Markdown format that outlines your project structure and provides detailed steps to set up and run your API.
+
+```markdown
 # Flask API Project
 
-Project Structure
+## Project Structure
 
-Your project directory should now look like this:
+Your project directory might look like this:
 
 ```
 /project_folder
   |-- config.json
   |-- .env
+  |-- csv_init.py
+  |-- api_key.py
+  |-- get_endpoints.py
   |-- main_api.py
-  |-- scripts/
-         |-- csv_init.py
-         |-- api_key.py
-         |-- get_endpoints.py
-  |-- data/            
-         |-- death_events.csv
-         |-- join_events.csv
-         |-- killer_events.csv
-         |-- kys_events.csv
-         |-- left_events.csv
-         |-- join_events.csv
-|-- setupScripts/ 
-         |-- make_key.sh 
-         |-- make_service.sh 
+  |-- setup_service.sh      # (Optional: Bash script to set up a systemd service)
 ```
-
 
 ## How to Use
 
@@ -36,22 +28,14 @@ Install the required Python packages using pip:
 pip install flask pandas python-dotenv
 ```
 
+### 2. Configure Environment Variables
 
-### 2. allow port 5000 through firewall
+Create a file named `.env` in your project folder with the following content (replace the API key with your actual key):
 
-```bash
-sudo allow ufw 5000
+```ini
+API_KEY={KEY}
 ```
 
-
-### 3. Configure Environment Variables and build CURL cmds for POST events
-
-Create a file named `.env` in your project folder with the api key (make your own or use the bash script to Generate a 32-byte random string and encode it in hexadecimal )
-Update (or create) your .env file with the new key. and build the .built_curls.md with updated CURL cmds to be used in UE5 logic (note this file is hidden as it has API key ):
-
-```bash
-./setupScripts/makeKey.sh 
-```
 
 
 ### 4. Initialize CSV Files
@@ -71,8 +55,6 @@ python main_api.py
 ```
 
 Your API will now be running on port 5000.
-
-
 
 ### 6. Setting Up as a Service (Optional)
 
@@ -105,4 +87,6 @@ Optional GET endpoints are available to retrieve the stored events from each CSV
 ---
 
 Follow these steps to set up, run, and test your API. For additional configuration or modifications, refer to the corresponding module files in your project.
+```
 
+Simply copy and paste the above content into a file named `README.md` in your project directory. This README file will guide users through the setup and usage of your Flask API project.

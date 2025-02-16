@@ -20,7 +20,7 @@ if [ "$update_primary" = "y" ] || [ "$update_primary" = "Y" ]; then
 
     # Create a hidden Markdown file with the curl commands containing the new API key
     DEFAULT_MD="docs/default_curl.md"
-    HIDDEN_MD=".built_curls.md"
+    HIDDEN_MD="docs/.built_curls.md"
     if [ -f "$DEFAULT_MD" ]; then
         cp "$DEFAULT_MD" "$HIDDEN_MD"
         sed -i.bak "s/API_KEY_HERE/$API_KEY/g" "$HIDDEN_MD"

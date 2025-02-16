@@ -2,9 +2,10 @@ from flask import Flask, request, jsonify
 from datetime import datetime
 import os, json, pandas as pd
 
-from api_key import check_api_key
-from get_endpoints import get_bp
-from csv_init import initialize_all_csvs
+# Import modules from the scripts folder
+from scripts.api_key import check_api_key
+from scripts.get_endpoints import get_bp
+from scripts.csv_init import initialize_all_csvs
 
 # Load configuration for CSV file paths
 with open("config.json", "r") as f:
