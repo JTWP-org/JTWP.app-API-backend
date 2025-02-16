@@ -1,18 +1,11 @@
 # Flask API Project
 
-## Project Structure
+Project Structure
 
-Your project directory might look like this:
-
-```
-/project_folder
-  |-- config.json
-  |-- .env
-  |-- csv_init.py
-  |-- api_key.py
-  |-- get_endpoints.py
-  |-- main_api.py
-  |-- setup_service.sh      # (Optional: Bash script to set up a systemd service)
+Your project directory should now look like this:
+```markdown
+/project_folder |-- config.json |-- .env |-- main_api.py |-- scripts/ |-- csv_init.py |-- api_key.py |-- get_endpoints.py |-- data/
+|-- death_events.csv |-- join_events.csv |-- killer_events.csv |-- kys_events.csv |-- left_events.csv |-- join_events.csv
 ```
 
 ## How to Use
