@@ -50,7 +50,7 @@ Your setup scripts are located in the setupScripts/ folder.
 <p>
 
 ```bash
-./setupScripts/make_key.sh
+bash setupScripts/makeKey.sh
 ```
 
 
