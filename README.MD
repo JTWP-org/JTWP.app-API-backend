@@ -50,6 +50,12 @@ Your project directory should now look like this:
     |-- config.json 
     |-- .env 
     |-- main_api.py 
+    |-- math/ 
+        |-- kills.py
+        |-- deaths.py
+        |-- tempOut/ 
+            |-- kills.json
+            |-- deaths.json
     |-- scripts/ 
         |-- csv_init.py 
         |-- api_key.py 
