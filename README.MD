@@ -6,9 +6,9 @@ Your project directory should now look like this:
 
 ```markdown
 /project_folder 
-|-- config.json 
-|-- .env 
-|-- main_api.py 
+    |-- config.json 
+    |-- .env 
+    |-- main_api.py 
     |-- scripts/ 
         |-- csv_init.py 
         |-- api_key.py 
