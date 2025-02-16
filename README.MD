@@ -107,7 +107,7 @@ You can use the provided curl commands (see `api_commands.md` for details) to te
 
 The API exposes the following endpoints:
 
-```markdown
+```http
 - **POST /api/submit_death**: Submit a death event.
 - **POST /api/submit_killer**: Submit a killer event.
 - **POST /api/submit_teamkill**: Submit a teamkill event.
