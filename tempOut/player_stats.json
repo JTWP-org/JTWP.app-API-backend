@@ -1,0 +1,227 @@
+[
+  {
+    "player": "PlayerB",
+    "deaths": 6,
+    "join": 0,
+    "kills": 0,
+    "kys": 0,
+    "left": 0,
+    "teamkill": 0
+  },
+  {
+    "player": "Playe2rB",
+    "deaths": 2,
+    "join": 0,
+    "kills": 0,
+    "kys": 0,
+    "left": 0,
+    "teamkill": 0
+  },
+  {
+    "player": "Pwwwlaye2rB",
+    "deaths": 1,
+    "join": 0,
+    "kills": 0,
+    "kys": 0,
+    "left": 0,
+    "teamkill": 0
+  },
+  {
+    "player": "Playe44442rB",
+    "deaths": 1,
+    "join": 0,
+    "kills": 0,
+    "kys": 0,
+    "left": 0,
+    "teamkill": 0
+  },
+  {
+    "player": "player1",
+    "deaths": 3,
+    "join": 0,
+    "kills": 0,
+    "kys": 0,
+    "left": 0,
+    "teamkill": 0
+  },
+  {
+    "player": "player2",
+    "deaths": 144,
+    "join": 0,
+    "kills": 0,
+    "kys": 0,
+    "left": 0,
+    "teamkill": 0
+  },
+  {
+    "player": "player3",
+    "deaths": 13,
+    "join": 0,
+    "kills": 0,
+    "kys": 0,
+    "left": 0,
+    "teamkill": 0
+  },
+  {
+    "player": "PlayerD",
+    "join": 2,
+    "left": 2,
+    "deaths": 0,
+    "kills": 0,
+    "kys": 0,
+    "teamkill": 0
+  },
+  {
+    "player": "test3",
+    "join": 2,
+    "kills": 5,
+    "deaths": 0,
+    "kys": 0,
+    "left": 0,
+    "teamkill": 0
+  },
+  {
+    "player": "test1",
+    "join": 1,
+    "kills": 1,
+    "deaths": 0,
+    "kys": 0,
+    "left": 0,
+    "teamkill": 0
+  },
+  {
+    "player": "test2",
+    "join": 1,
+    "deaths": 0,
+    "kills": 0,
+    "kys": 0,
+    "left": 0,
+    "teamkill": 0
+  },
+  {
+    "player": "sprucemoose1985",
+    "kills": 7,
+    "deaths": 0,
+    "join": 0,
+    "kys": 0,
+    "left": 0,
+    "teamkill": 0
+  },
+  {
+    "player": "testname2",
+    "kills": 3,
+    "deaths": 0,
+    "join": 0,
+    "kys": 0,
+    "left": 0,
+    "teamkill": 0
+  },
+  {
+    "player": "PlayerA",
+    "kills": 2,
+    "deaths": 0,
+    "join": 0,
+    "kys": 0,
+    "left": 0,
+    "teamkill": 0
+  },
+  {
+    "player": "testname1",
+    "kills": 2,
+    "deaths": 0,
+    "join": 0,
+    "kys": 0,
+    "left": 0,
+    "teamkill": 0
+  },
+  {
+    "player": "PlayerC",
+    "kys": 5,
+    "deaths": 0,
+    "join": 0,
+    "kills": 0,
+    "left": 0,
+    "teamkill": 0
+  },
+  {
+    "player": "Playermathresr5",
+    "kys": 4,
+    "deaths": 0,
+    "join": 0,
+    "kills": 0,
+    "left": 0,
+    "teamkill": 0
+  },
+  {
+    "player": "Playermathresr1",
+    "kys": 1,
+    "deaths": 0,
+    "join": 0,
+    "kills": 0,
+    "left": 0,
+    "teamkill": 0
+  },
+  {
+    "player": "Playermathresr2",
+    "kys": 1,
+    "deaths": 0,
+    "join": 0,
+    "kills": 0,
+    "left": 0,
+    "teamkill": 0
+  },
+  {
+    "player": "testingmath1",
+    "left": 3,
+    "deaths": 0,
+    "join": 0,
+    "kills": 0,
+    "kys": 0,
+    "teamkill": 0
+  },
+  {
+    "player": "testingmath3",
+    "left": 2,
+    "deaths": 0,
+    "join": 0,
+    "kills": 0,
+    "kys": 0,
+    "teamkill": 0
+  },
+  {
+    "player": "testingmath2",
+    "left": 1,
+    "deaths": 0,
+    "join": 0,
+    "kills": 0,
+    "kys": 0,
+    "teamkill": 0
+  },
+  {
+    "player": "PlayerX",
+    "teamkill": 4,
+    "deaths": 0,
+    "join": 0,
+    "kills": 0,
+    "kys": 0,
+    "left": 0
+  },
+  {
+    "player": "Playertestyy123",
+    "teamkill": 3,
+    "deaths": 0,
+    "join": 0,
+    "kills": 0,
+    "kys": 0,
+    "left": 0
+  },
+  {
+    "player": "Playertestyy1233",
+    "teamkill": 3,
+    "deaths": 0,
+    "join": 0,
+    "kills": 0,
+    "kys": 0,
+    "left": 0
+  }
+]
