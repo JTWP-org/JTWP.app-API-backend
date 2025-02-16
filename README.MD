@@ -84,6 +84,4 @@ Optional GET endpoints are available to retrieve the stored events from each CSV
 ---
 
 Follow these steps to set up, run, and test your API. For additional configuration or modifications, refer to the corresponding module files in your project.
-```
 
-Simply copy and paste the above content into a file named `README.md` in your project directory. This README file will guide users through the setup and usage of your Flask API project.
