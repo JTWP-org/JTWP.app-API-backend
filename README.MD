@@ -1,7 +1,8 @@
 # Flask API Project
 
 <hr>
-```html
+
+```markdown
 # Current Plan
 
 The backend will receive POST requests from the mod containing information about various events. The current events include:
