@@ -1,6 +1,3 @@
-Below is a sample README in Markdown format that outlines your project structure and provides detailed steps to set up and run your API.
-
-```markdown
 # Flask API Project
 
 ## Project Structure
