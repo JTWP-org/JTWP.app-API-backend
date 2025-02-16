@@ -25,7 +25,7 @@ Your project directory should now look like this:
 
 ## How to Use
 
-### 1. Install Dependencies / allow port 
+### 1. Install Dependencies / allow port / perms
 
 <p>
 Install the required Python packages using pip:
@@ -34,6 +34,8 @@ Install the required Python packages using pip:
 ```bash
 pip install flask pandas python-dotenv
 sudo ufw allow 5000
+sudo chmod +x makeService.sh
+sudo chmod +x makeKey.sh
 ```
 
 ### 2.Generate or Update API Keys 
