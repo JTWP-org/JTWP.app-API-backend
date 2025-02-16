@@ -51,10 +51,10 @@ Your project directory should now look like this:
     |-- .env 
     |-- main_api.py 
     |-- math/ 
-        |-- kills.py
-        |-- deaths.py
+        |-- kills.py 
+        |-- deaths.py 
         |-- tempOut/ 
-            |-- kills.json
+            |-- kills.json 
             |-- deaths.json
     |-- scripts/ 
         |-- csv_init.py 
