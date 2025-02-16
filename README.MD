@@ -1,9 +1,5 @@
 # Flask API Project
 
-## Project Structure
-
-Your project directory might look like this:
-
 
 ## How to Use
 
