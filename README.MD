@@ -28,25 +28,37 @@ Install the required Python packages using pip:
 pip install flask pandas python-dotenv
 ```
 
-### 2. Configure Environment Variables
+### 2.Generate or Update API Keys 
 
-Create a file named `.env` in your project folder with the following content (replace the API key with your actual key):
+Your setup scripts are located in the setupScripts/ folder.
 
-```ini
-API_KEY={KEY}
-```
-
-
-
-### 4. Initialize CSV Files
-
-Run the CSV initialization script to create the necessary CSV files (if they don’t exist):
+    Generate or Update API Key
+    Run the script to generate a new primary API key or add a secondary key. For example:
 
 ```bash
-python csv_init.py
+./setupScripts/make_key.sh
 ```
 
-### 5. Run the API
+This script will:
+
+    Generate a new primary API key (if you choose to).
+    Update the .env file with the new key.
+    Create or update a hidden Markdown file with curl commands (located at, for example, docs/.curl_commands.md), replacing any placeholder with the new key.
+    Optionally generate and append a secondary API key to a secondary key file.
+
+
+### 3 (FOR DEBUG)
+3. Initialize CSV Files
+
+The CSV files are automatically initialized when you run the API. However, if you wish to run the initialization separately, execute:
+
+```bash
+python scripts/csv_init.py
+```
+
+This will create the necessary CSV files inside the data/ folder if they do not already exist.
+
+### 4. Run the API
 
 Start the API server by running:
 
@@ -55,6 +67,8 @@ python main_api.py
 ```
 
 Your API will now be running on port 5000.
+
+<hr>
 
 ### 6. Setting Up as a Service (Optional)
 
@@ -87,6 +101,3 @@ Optional GET endpoints are available to retrieve the stored events from each CSV
 ---
 
 Follow these steps to set up, run, and test your API. For additional configuration or modifications, refer to the corresponding module files in your project.
-```
-
-Simply copy and paste the above content into a file named `README.md` in your project directory. This README file will guide users through the setup and usage of your Flask API project.
