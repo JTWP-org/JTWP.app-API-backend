@@ -1,6 +1,3 @@
-Below is a sample README in Markdown format that outlines your project structure and provides detailed steps to set up and run your API.
-
-```markdown
 # Flask API Project
 
 ## Project Structure
@@ -97,7 +94,3 @@ The API exposes the following endpoints:
 - **POST /api/submit_left**: Submit a left event.
 
 Optional GET endpoints are available to retrieve the stored events from each CSV file.
-
----
-
-Follow these steps to set up, run, and test your API. For additional configuration or modifications, refer to the corresponding module files in your project.
