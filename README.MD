@@ -35,11 +35,14 @@ sudo allow ufw 5000
 
 ### 3. Configure Environment Variables
 
-Create a file named `.env` in your project folder with the following content (replace the API key with your actual key):
+Create a file named `.env` in your project folder with the api key (make your own or use the bash script to Generate a 32-byte random string and encode it in hexadecimal )
+keep in mind u will need to pass this key to the CURL cmds used later on:
 
-```ini
-API_KEY={KEY}
+```bash
+./makeKey.sh > .env
 ```
+
+makeKey.sh
 
 
 
