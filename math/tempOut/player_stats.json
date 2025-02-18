@@ -63,21 +63,21 @@
     "teamkill": 0
   },
   {
+    "player": "test3",
+    "join": 8,
+    "kills": 5,
+    "deaths": 0,
+    "kys": 0,
+    "left": 0,
+    "teamkill": 0
+  },
+  {
     "player": "PlayerD",
     "join": 2,
     "left": 2,
     "deaths": 0,
     "kills": 0,
     "kys": 0,
-    "teamkill": 0
-  },
-  {
-    "player": "test3",
-    "join": 2,
-    "kills": 5,
-    "deaths": 0,
-    "kys": 0,
-    "left": 0,
     "teamkill": 0
   },
   {
@@ -99,8 +99,8 @@
     "teamkill": 0
   },
   {
-    "player": "sprucemoose1985",
-    "kills": 7,
+    "player": "testname4",
+    "kills": 17,
     "deaths": 0,
     "join": 0,
     "kys": 0,
@@ -109,7 +109,7 @@
   },
   {
     "player": "testname2",
-    "kills": 3,
+    "kills": 9,
     "deaths": 0,
     "join": 0,
     "kys": 0,
@@ -117,8 +117,8 @@
     "teamkill": 0
   },
   {
-    "player": "PlayerA",
-    "kills": 2,
+    "player": "sprucemoose1985",
+    "kills": 7,
     "deaths": 0,
     "join": 0,
     "kys": 0,
@@ -135,8 +135,17 @@
     "teamkill": 0
   },
   {
+    "player": "PlayerA",
+    "kills": 2,
+    "deaths": 0,
+    "join": 0,
+    "kys": 0,
+    "left": 0,
+    "teamkill": 0
+  },
+  {
     "player": "PlayerC",
-    "kys": 5,
+    "kys": 13,
     "deaths": 0,
     "join": 0,
     "kills": 0,
@@ -145,7 +154,7 @@
   },
   {
     "player": "Playermathresr5",
-    "kys": 4,
+    "kys": 12,
     "deaths": 0,
     "join": 0,
     "kills": 0,
@@ -198,6 +207,15 @@
     "teamkill": 0
   },
   {
+    "player": "Playertestyy1233",
+    "teamkill": 24,
+    "deaths": 0,
+    "join": 0,
+    "kills": 0,
+    "kys": 0,
+    "left": 0
+  },
+  {
     "player": "PlayerX",
     "teamkill": 4,
     "deaths": 0,
@@ -208,15 +226,6 @@
   },
   {
     "player": "Playertestyy123",
-    "teamkill": 3,
-    "deaths": 0,
-    "join": 0,
-    "kills": 0,
-    "kys": 0,
-    "left": 0
-  },
-  {
-    "player": "Playertestyy1233",
     "teamkill": 3,
     "deaths": 0,
     "join": 0,

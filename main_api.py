@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_file
 from datetime import datetime
 import os, json, pandas as pd
 
@@ -7,7 +7,7 @@ from scripts.api_key import check_api_key
 from scripts.get_endpoints import get_bp
 from scripts.csv_init import initialize_all_csvs
 
-# Load configuration for CSV file paths
+# Load configuration for CSV file paths from config.json
 with open("config.json", "r") as f:
     config = json.load(f)
 csv_paths = config["CSV_FILE_PATHS"]
@@ -34,6 +34,10 @@ def append_data_to_csv(file_path, new_data):
         print(f"Data added to {file_path}.")
     except Exception as e:
         print(f"Error appending data to {file_path}: {e}")
+
+############################
+# POST Endpoints
+############################
 
 # POST endpoint for death events
 @app.route('/api/submit_death', methods=['POST'])
@@ -285,9 +289,44 @@ def submit_left():
     append_data_to_csv(csv_paths["LEFT_CSV_FILE"], new_data)
     return jsonify({"message": "Left event processed", "data": payload}), 200
 
-#####################
+############################
+# NEW ENDPOINT: Serve Player Stats JSON for Website
+############################
+
+@app.route('/api/player_stats', methods=['GET'])
+def get_player_stats():
+    # Path to the JSON file with player stats
+    json_file_path = "/home/steam/api2/JTWP.app-API-backend/math/tempOut/player_stats.json"
+    try:
+        return send_file(json_file_path, mimetype='application/json')
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+############################
 # GET Endpoints (Optional)
-#####################
+############################
+
+# New endpoint to count items from killer events (ignoring death items)
+@app.route('/api/item_stats', methods=['GET'])
+def item_stats():
+    if not check_api_key(request):
+        return jsonify({"error": "Unauthorized access. Invalid API key."}), 401
+    try:
+        # Read the killer events CSV file (assuming items from killer events are recorded there)
+        df = pd.read_csv(csv_paths["KILLER_CSV_FILE"])
+        # Clean the "item" column and count occurrences (ignoring empty entries)
+        if "item" not in df.columns:
+            return jsonify({"error": "'item' column not found in killer events data"}), 400
+        # Remove any leading/trailing whitespace, then count occurrences
+        df["item"] = df["item"].astype(str).str.strip()
+        item_counts = df["item"].value_counts().to_dict()
+        return jsonify({
+            "message": "Item stats retrieved successfully",
+            "data": item_counts
+        }), 200
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
 
 @app.route('/api/get_death_events', methods=['GET'])
 def get_death_events():
@@ -349,5 +388,14 @@ def get_left_events():
     except Exception as e:
         return jsonify({"error": f"Error retrieving left events: {e}"}), 500
 
+@app.route('/player_stats.json', methods=['GET'])
+def player_stats():
+    json_file_path = "/home/steam/api2/JTWP.app-API-backend/math/tempOut/player_stats.json"
+    try:
+        return send_file(json_file_path, mimetype='application/json')
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000, debug=True)
+

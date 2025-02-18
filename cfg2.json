@@ -1,0 +1,12 @@
+{
+  "csv_files": [
+    "data/death_events.csv",
+    "data/join_events.csv",,
+    "data/killer_events.csv",
+    "data/kys_events.csv",
+    "data/left_events.csv",
+    "data/teamKill_events.csv",
+
+  ]
+}
+
